@@ -11,8 +11,8 @@ function ManageTasks () {
                         <div className="card-body">
                             <div className="mb-3">
                                 <div className="box-input">
-                                    <input type="text" id="task" required />
                                     <label htmlFor="task">Aggiungi Task</label>
+                                    <input placeholder="Scrivi qualcosa..." type="text" id="task" required />
                                 </div>
                             </div>
                             <div>

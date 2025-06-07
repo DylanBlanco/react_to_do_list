@@ -12,6 +12,8 @@
 }
 
 
+/* ---------------------------Manage-tasks--------------------------- */
+
 .Manage-tasks .box-input {
   display: flex;
   flex-direction: column;
@@ -46,4 +48,3 @@
   background-color: #fff;
   box-shadow: 0 0 0 4px rgba(111, 66, 193, 0.2);
 }
-
