@@ -12,7 +12,7 @@ function Main() {
                 <div className="container">
                     <div className="row">
                         {/* Elenco Task */}
-                        <div className="col-5 p-3 bg-secondary shadow-lg rounded d-flex flex-column gap-2">
+                        <div className="col-5 p-3 bg-secondary shadow-lg rounded">
                             <Tasks />
                         </div>
 
@@ -22,7 +22,7 @@ function Main() {
                         </div>
 
                         {/* Aggiungi task */}
-                        <div className="col-5 p-3 bg-secondary bg-gradient">
+                        <div className="col-5 p-3 bg-secondary shadow-lg rounded">
                             Aggiungi Task
                         </div>
                     </div>
