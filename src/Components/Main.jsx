@@ -1,25 +1,18 @@
-import Header from './Components/Header';
-import Main from './Components/Main';
-import './Css/App.css'
 
-function App() {
+function Main() {
     // Logica  ----------------------------------------------
 
     
     // Template  --------------------------------------------
     return (
         <>
-        <div className="app">
+        <div className="main">
             <div className="container">
-
-                <Header />
-
-                <Main />
-                
+                kujkgvukuvyg
             </div>
         </div>
         </>
     );
 }
 
-export default App;
+export default Main;
