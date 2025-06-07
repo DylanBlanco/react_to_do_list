@@ -2,6 +2,8 @@ function Tasks () {
     return (
         <div className="Tasks">
             <div className="d-flex flex-column gap-2">
+
+                {/* TASK */}
                 <div className='bg-success p-2 rounded'>
                     <div className="row align-items-center">
                         <div className='col-2'>
@@ -13,7 +15,7 @@ function Tasks () {
                         </div>
                         
                         <div className="col-3 d-flex justify-content-center align-items-center">
-                            <button className='btn btn-primary'>
+                            <button className='btn btn-primary d-flex align-items-center'>
                                 <img src="/public/Img/pencil-square.svg" alt="pencil-square" />
                             </button>
                         </div>
