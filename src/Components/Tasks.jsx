@@ -1,10 +1,10 @@
 function Tasks () {
     return (
         <div className="Tasks">
-            <div className="d-flex flex-column gap-2">
+            <div className="d-flex flex-column gap-3">
 
                 {/* TASK */}
-                <div className='bg-success p-2 rounded'>
+                <div className='color-task p-2 rounded shadow'>
                     <div className="row align-items-center">
                         <div className='col-2'>
                             <input type="checkbox" />

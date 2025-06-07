@@ -1,4 +1,5 @@
 import '../Css/Main.css'
+import ManageTasks from './ManageTasks';
 import Tasks from './Tasks';
 
 function Main() {
@@ -10,20 +11,37 @@ function Main() {
         <>
             <div className="main">
                 <div className="container">
-                    <div className="row">
+                    <div className="row justify-content-between">
+
                         {/* Elenco Task */}
-                        <div className="col-5 p-3 bg-secondary shadow-lg rounded">
-                            <Tasks />
+                        <div className="box-task col-5 p-3 shadow-lg rounded overflow-auto">
+                            <div className="row">
+                                <h2 className='text-center'>Tasks</h2>
+                            </div>
+
+                            <hr />
+
+                            <div className="row">
+                                <Tasks />
+                            </div>
                         </div>
 
                         {/* Linea divisoria */}
-                        <div className="col-1">
+                        <div className="col-2">
                             <hr />
                         </div>
 
                         {/* Aggiungi task */}
-                        <div className="col-5 p-3 bg-secondary shadow-lg rounded">
-                            Aggiungi Task
+                        <div className="box-task col-5 p-3 shadow-lg rounded overflow-auto">
+                            <div className="row">
+                                <h2 className='text-center'>Manage tasks</h2>
+                            </div>
+
+                            <hr />
+                            
+                            <div className="row">
+                                <ManageTasks />
+                            </div>
                         </div>
                     </div>
                 </div>

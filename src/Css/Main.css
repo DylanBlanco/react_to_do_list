@@ -1,3 +1,49 @@
 .main {
     padding-top: 5%;
 }
+
+.main .box-task {
+    background-color: rgb(138, 203, 164);
+    height: calc(100vh - 40vh);
+}
+
+.main .color-task {
+    background-color: rgba(93, 134, 96, 0.418);
+}
+
+
+.Manage-tasks .box-input {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin: 1rem 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.Manage-tasks .box-input label {
+  font-weight: 600;
+  color: #333;
+}
+
+.Manage-tasks .box-input input {
+  padding: 0.75rem 1rem;
+  border: 2px solid #ddd;
+  border-radius: 12px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  outline: none;
+  background-color: #f9f9f9;
+  color: #333;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.Manage-tasks .box-input input::placeholder {
+  color: #aaa;
+}
+
+.Manage-tasks .box-input input:focus {
+  border-color: #6f42c1; /* viola Bootstrap-ish */
+  background-color: #fff;
+  box-shadow: 0 0 0 4px rgba(111, 66, 193, 0.2);
+}
+
