@@ -2,11 +2,16 @@ import { useState } from "react"
 
 function ManageTasks () {
     // Logica --------------------------------------------------------------
-    const [task, setTask] = useState([]);
+    
+    const [tasks, setTasks] = useState([]);
+    const [newTask, setNewTask] = useState("");
 
+    // Aggiungi nuova task
     function addTask() {
-        setTask(t => [...t, 'task'])
-        console.log("Aggiunta Task")
+        if (newTask.trim() === "") return; // Evita task vuote
+        setTasks(prevTasks => [...prevTasks, newTask]);
+        setNewTask(""); // Pulisce il campo input
+        console.log("Aggiunta Task:", newTask);
     }
 
 
@@ -24,19 +29,23 @@ function ManageTasks () {
                                         type="text" 
                                         id="task" 
                                         placeholder="Scrivi qualcosa..."
-                                        // value={newTask}
+                                        value={newTask}
+                                        onChange={e => setNewTask(e.target.value)}
                                         required 
                                     />
                                 </div>
                             </div>
                             <div>
-                                <button className="btn btn-success" onClick={addTask}>Aggiungi</button>
+                                <button
+                                    className="btn btn-success"
+                                    onClick={addTask}
+                                >Aggiungi</button>
                             </div>
                         </div>
                     </div>
 
                     <div className="card">
-                        {task}
+                        {tasks}
                     </div>
                 </div>
 
