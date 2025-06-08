@@ -1,4 +1,5 @@
 import { useState } from "react"
+import Tasks from "./Tasks"  // component Tasks
 
 function ManageTasks () {
     // Logica --------------------------------------------------------------
@@ -43,14 +44,8 @@ function ManageTasks () {
                             </div>
                         </div>
                     </div>
-
-                    <div className="card">
-                        {
-                            tasks.map((t, index) => (
-                                <li key={index}>{t}</li>
-                            ))
-                        }
-                    </div>
+                    
+                    <Tasks tasks={tasks} />
                 </div>
 
             </div>
