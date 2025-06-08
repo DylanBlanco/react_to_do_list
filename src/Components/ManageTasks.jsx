@@ -1,5 +1,13 @@
+import { useState } from "react"
+
 function ManageTasks () {
     // Logica --------------------------------------------------------------
+    const [task, setTask] = useState([]);
+
+    function addTask() {
+        setTask(t => [...t, 'task'])
+        console.log("Aggiunta Task")
+    }
 
 
     // Template ------------------------------------------------------------
@@ -12,13 +20,23 @@ function ManageTasks () {
                             <div className="mb-3">
                                 <div className="box-input">
                                     <label htmlFor="task">Aggiungi Task</label>
-                                    <input placeholder="Scrivi qualcosa..." type="text" id="task" required />
+                                    <input
+                                        type="text" 
+                                        id="task" 
+                                        placeholder="Scrivi qualcosa..."
+                                        // value={newTask}
+                                        required 
+                                    />
                                 </div>
                             </div>
                             <div>
-                                <button className="btn btn-success">Aggiungi</button>
+                                <button className="btn btn-success" onClick={addTask}>Aggiungi</button>
                             </div>
                         </div>
+                    </div>
+
+                    <div className="card">
+                        {task}
                     </div>
                 </div>
 
