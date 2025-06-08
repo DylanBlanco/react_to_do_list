@@ -45,7 +45,11 @@ function ManageTasks () {
                     </div>
 
                     <div className="card">
-                        {tasks}
+                        {
+                            tasks.map((t, index) => (
+                                <li key={index}>{t}</li>
+                            ))
+                        }
                     </div>
                 </div>
 
