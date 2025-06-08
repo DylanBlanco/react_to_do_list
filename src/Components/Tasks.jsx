@@ -11,7 +11,7 @@ function Tasks () {
                         </div>
 
                         <div className='col'>
-                            Task 
+                            Tasks
                         </div>
                         
                         <div className="col-3 d-flex justify-content-center align-items-center">
