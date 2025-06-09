@@ -1,8 +1,19 @@
 import { useState } from "react";
 
-function EditTasks ({currentText}) {
+function EditTasks ({currentText, tasks, index, setTasks, onClose}) {
     // Logica  ------------------------------------------------
     const [editedText, setEditedText] = useState(currentText);
+
+    // Salva le modifiche di una task quando clicchi su "Salva" 
+    const handleSave = () => {
+        if (editedText.trim() === "")  // Controlla che il campo modificato non sia vuoto.
+            return;
+
+        const updateTasks = [...tasks];
+        updateTasks[index] = editedText;
+        setTasks(updateTasks);
+        onClose(); // Chiude il form di modifica
+    }
 
 
     // Template  ----------------------------------------------
