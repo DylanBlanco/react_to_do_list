@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function EditTasks () {
+function EditTasks ({currentText}) {
     // Logica  ------------------------------------------------
     const [editedText, setEditedText] = useState(currentText);
 
