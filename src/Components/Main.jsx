@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "../Css/Main.css";
 import ManageTasks from "../Logica/ManageTasks";
 import Tasks from "../Visual/Tasks";
@@ -6,6 +6,21 @@ import Tasks from "../Visual/Tasks";
 function Main() {
     // Stato centralizzato
     const [tasks, setTasks] = useState([]);
+
+    // Leggi dal localStorage al primo rendering
+    useEffect(() => {
+        const savedTasks = JSON.parse(localStorage.getItem("tasks"));
+        if (savedTasks) {
+            setTasks(savedTasks);
+        }
+    }, []);
+    
+    // Salva ogni volta che tasks cambia
+    useEffect(() => {
+        localStorage.setItem("tasks", JSON.stringify(tasks));
+    }, [tasks]);
+
+
 
     return (
         <div className="main">
