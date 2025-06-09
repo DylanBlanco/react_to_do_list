@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "../Css/Main.css";
-import ManageTasks from "./ManageTasks";
-import Tasks from "./Tasks";
+import ManageTasks from "../Logica/ManageTasks";
+import Tasks from "../Visual/Tasks";
 
 function Main() {
     // Stato centralizzato
