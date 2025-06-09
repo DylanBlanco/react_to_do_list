@@ -34,7 +34,7 @@ function Main() {
                     <hr />
                     <div className="row">
                         {/* gestione della stampa */}
-                        <Tasks tasks={tasks} setTasks={setTasks} />
+                        <Tasks tasks={tasks} />
                     </div>
                 </div>
 

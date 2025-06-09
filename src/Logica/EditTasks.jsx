@@ -1,6 +1,8 @@
+import { useState } from "react";
+
 function EditTasks () {
     // Logica  ------------------------------------------------
-    
+    const [editedText, setEditedText] = useState(currentText);
 
 
     // Template  ----------------------------------------------
