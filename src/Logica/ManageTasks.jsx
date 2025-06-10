@@ -9,6 +9,13 @@ function ManageTasks({ tasks, setTasks }) {
         setNewTask("");
     }
 
+    function deleteAllTasks() {
+        const confirmDelete = window.confirm("Sei sicuro di voler eliminare tutte le task?");
+        if (confirmDelete) {
+            setTasks([]);
+        }
+    }
+
     return (
         <div className="Manage-tasks">
             <div className="color-task card">
@@ -30,6 +37,7 @@ function ManageTasks({ tasks, setTasks }) {
                         <button className="btn btn-success" onClick={addTask}>
                             Aggiungi
                         </button>
+
                     </div>
                 </div>
             </div>
