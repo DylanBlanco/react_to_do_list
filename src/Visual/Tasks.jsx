@@ -34,7 +34,9 @@ function Tasks({ tasks = [], setTasks }) {
                                     )}
                                 </div>
 
-                                <div className="col-3 d-flex justify-content-center align-items-center">
+                                <div className="col d-flex gap-3 justify-content-center align-items-center">
+                                    {/* Button Editing */}
+                                    
                                     <button
                                         className="btn btn-primary d-flex align-items-center"
                                         onClick={() => setEditingIndex(index)}
@@ -42,6 +44,16 @@ function Tasks({ tasks = [], setTasks }) {
                                         <img
                                             src="/public/Img/pencil-square.svg"
                                             alt="pencil-square"
+                                        />
+                                    </button>
+
+                                    {/* Button Delete */}
+                                    <button
+                                        className="btn btn-danger d-flex align-items-center"
+                                    >
+                                        <img
+                                            src="/public/Img/trash.svg"
+                                            alt="trash"
                                         />
                                     </button>
                                 </div>
