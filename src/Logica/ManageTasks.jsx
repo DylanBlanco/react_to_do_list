@@ -33,11 +33,18 @@ function ManageTasks({ tasks, setTasks }) {
                             />
                         </div>
                     </div>
-                    <div>
+                    <div className="d-flex gap-3">
+                        {/* Button Aggiungi */}
                         <button className="btn btn-success" onClick={addTask}>
                             Aggiungi
                         </button>
 
+                        {/* Button Elimina tutte */}
+                        {tasks.length > 0 && (  // tasks.length > 0: controlla se ci sono una o più task
+                            <button className="btn btn-danger" onClick={deleteAllTasks}>
+                                Elimina tutte
+                            </button>
+                        )}
                     </div>
                 </div>
             </div>
