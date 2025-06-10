@@ -1,5 +1,6 @@
 import { useState } from "react";
 import EditTasks from "../Logica/EditTasks";
+import DeleteTasks from "../Logica/DeleteTasks";
 
 function Tasks({ tasks = [], setTasks }) {
     // Logica ---------------------------------------------------
@@ -34,7 +35,9 @@ function Tasks({ tasks = [], setTasks }) {
                                     )}
                                 </div>
 
-                                <div className="col-3 d-flex justify-content-center align-items-center">
+                                <div className="col d-flex gap-3 justify-content-center align-items-center">
+                                    {/* Button Editing */}
+                                    
                                     <button
                                         className="btn btn-primary d-flex align-items-center"
                                         onClick={() => setEditingIndex(index)}
@@ -44,21 +47,14 @@ function Tasks({ tasks = [], setTasks }) {
                                             alt="pencil-square"
                                         />
                                     </button>
-                                </div>
 
-                                {/* Stampa Tasks */}
-                                {/* <div className="col">
-                                    {task}
+                                    {/* Button Delete */}
+                                    <DeleteTasks 
+                                        index = {index}
+                                        tasks = {tasks}
+                                        setTasks = {setTasks}
+                                    />
                                 </div>
-
-                                <div className="col-3 d-flex justify-content-center align-items-center">
-                                    <button className="btn btn-primary d-flex align-items-center">
-                                        <img
-                                        src="/public/Img/pencil-square.svg"
-                                        alt="pencil-square"
-                                        />
-                                    </button>
-                                </div> */}
                             </div>
                         </div>
                     ))
