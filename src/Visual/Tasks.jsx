@@ -1,5 +1,6 @@
 import { useState } from "react";
 import EditTasks from "../Logica/EditTasks";
+import DeleteTasks from "../Logica/DeleteTasks";
 
 function Tasks({ tasks = [], setTasks }) {
     // Logica ---------------------------------------------------
@@ -48,22 +49,12 @@ function Tasks({ tasks = [], setTasks }) {
                                     </button>
 
                                     {/* Button Delete */}
-                                    
+                                    <DeleteTasks 
+                                        index = {index}
+                                        tasks = {tasks}
+                                        setTasks = {setTasks}
+                                    />
                                 </div>
-
-                                {/* Stampa Tasks */}
-                                {/* <div className="col">
-                                    {task}
-                                </div>
-
-                                <div className="col-3 d-flex justify-content-center align-items-center">
-                                    <button className="btn btn-primary d-flex align-items-center">
-                                        <img
-                                        src="/public/Img/pencil-square.svg"
-                                        alt="pencil-square"
-                                        />
-                                    </button>
-                                </div> */}
                             </div>
                         </div>
                     ))

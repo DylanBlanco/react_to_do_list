@@ -1,4 +1,4 @@
-export default function DeleteTasks ({index, tasks, setTask}) {
+function DeleteTasks ({index, tasks, setTask}) {
     // Logica -------------------------------------
     const handleTasks = () => {
         const updateTasks = tasks.filter((_, i) => i !== index);
@@ -19,5 +19,8 @@ export default function DeleteTasks ({index, tasks, setTask}) {
                 />
             </button>
         </>
-    )
+    );
 }
+
+
+export default DeleteTasks;
