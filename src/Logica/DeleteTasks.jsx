@@ -1,12 +1,17 @@
-export default function DeleteTasks () {
+export default function DeleteTasks ({index, tasks, setTask}) {
     // Logica -------------------------------------
     
     // Template -----------------------------------
     return (
         <>
-            <div>
-                Delte
-            </div>
+            <button
+                className="btn btn-danger d-flex align-items-center"
+            >
+                <img
+                    src="/public/Img/trash.svg"
+                    alt="trash"
+                />
+            </button>
         </>
     )
 }

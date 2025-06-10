@@ -48,14 +48,7 @@ function Tasks({ tasks = [], setTasks }) {
                                     </button>
 
                                     {/* Button Delete */}
-                                    <button
-                                        className="btn btn-danger d-flex align-items-center"
-                                    >
-                                        <img
-                                            src="/public/Img/trash.svg"
-                                            alt="trash"
-                                        />
-                                    </button>
+                                    
                                 </div>
 
                                 {/* Stampa Tasks */}
