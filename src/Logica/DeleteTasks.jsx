@@ -1,8 +1,8 @@
-function DeleteTasks ({index, tasks, setTask}) {
+function DeleteTasks ({index, tasks, setTasks}) {
     // Logica -------------------------------------
     const handleTasks = () => {
         const updateTasks = tasks.filter((_, i) => i !== index);
-        setTask(updateTasks);
+        setTasks(updateTasks);
     };
 
     
